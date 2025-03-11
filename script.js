@@ -1,4 +1,4 @@
-export class Person {
+class Person {
   private _name: string;
   private _age: number;
 
@@ -20,19 +20,19 @@ export class Person {
   }
 }
 
-export class Student extends Person {
+class Student extends Person {
   study(): void {
     console.log(`${this.name} is studying`);
   }
 }
 
-export class Teacher extends Person {
+class Teacher extends Person {
   teach(): void {
     console.log(`${this.name} is teaching`);
   }
 }
 
-// Attach classes to window object properly
-window['Person'] = Person;
-window['Student'] = Student;
-window['Teacher'] = Teacher;
+// Attach classes to the window object
+window.Person = Person;
+window.Student = Student;
+window.Teacher = Teacher;
