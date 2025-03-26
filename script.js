@@ -8,6 +8,11 @@ class Person {
   get name() {
     return this._name;
   }
+
+  get age(){
+	  return this._age;
+  }	
+	
   set age(age) {
     this._age = age;
   }
@@ -18,7 +23,7 @@ class Student extends Person {
     super(name, age); 
   }
   study() {
-    console.log(${this.name} is studying);
+    console.log(`${this.name} is studying`);
   }
 }
 
@@ -27,9 +32,13 @@ class Teacher extends Person {
     super(name, age);
   }
   teach() {
-    console.log(${this.name} is teaching);
+    console.log(`${this.name} is teaching`);
   }
 }
+
+const person = new Person("John", 25);
+console.log(person.name)
+
 // Do not change the code below this line
 window.Person = Person;
 window.Student = Student;
